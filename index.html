@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolioo</title>
+    <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,25 +13,18 @@
     </script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-gray-100 text-gray-900 transition-all dark:bg-gray-900 dark:text-white">
 
     <!-- Navbar -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-10 dark:bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <!-- Logo -->
-                <div class="text-2xl font-bold">divakar</div>
-
-                <!-- Search Bar -->
+                <div class="text-2xl font-bold text-blue-500">Divakar</div>
                 <div class="relative">
-                    <input type="text" id="search" placeholder="Search..."
-                        class="px-3 py-2 w-64 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-700 dark:text-white focus:ring focus:ring-blue-400">
-                    <div id="suggestions"
-                        class="absolute top-12 left-0 w-64 bg-white dark:bg-gray-700 rounded-lg shadow-md hidden">
-                    </div>
+                    <input type="text" id="search" placeholder="Search..." class="px-3 py-2 w-64 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-700 dark:text-white focus:ring focus:ring-blue-400">
+                    <div id="suggestions" class="absolute top-12 left-0 w-64 bg-white dark:bg-gray-700 rounded-lg shadow-md hidden"></div>
                 </div>
-
-                <!-- Menu -->
                 <div class="hidden md:flex space-x-6">
                     <a href="#" class="hover:text-blue-500">Home</a>
                     <a href="#" class="hover:text-blue-500">About</a>
@@ -43,24 +37,70 @@
                     </div>
                     <a href="#" class="hover:text-blue-500">Contact</a>
                 </div>
-
-                <!-- Dark Mode Toggle -->
-                <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-600">
-                    🌙
-                </button>
+                <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-600">🌙</button>
             </div>
         </div>
     </nav>
 
-    <!-- Animated Body Content -->
-    <div class="flex items-center justify-center h-screen">
-        <h1 class="text-4xl font-bold">
-            <span class="typing text-blue-500">Hey, Welcome to India Asks.</span>
+    <!-- Hero Section -->
+    <div class="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600">
+        <h1 class="text-5xl font-bold text-white animate__animated animate__fadeIn animate__delay-1s">
+            <span class="typing text-4xl text-yellow-300">Hey, Welcome to India Asks.</span>
         </h1>
     </div>
 
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-10">
+        <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Amazon Clone -->
+            <div class="project relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="amazon-clone.png" alt="Amazon Clone" class="w-full h-72 object-cover">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="text-xl font-bold text-white">Amazon Clone</h3>
+                            <p class="text-sm text-white">A fully functional Amazon clone using HTML, CSS, and JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Calculator -->
+            <div class="project relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="calculator.png" alt="Calculator" class="w-full h-72 object-cover">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="text-xl font-bold text-white">QR Converter</h3>
+                            <p class="text-sm text-white"> A QR code generator built with JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- QR Converter -->
+            <div class="project relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="qr-converter.png" alt="QR Converter" class="w-full h-72 object-cover">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="text-xl font-bold text-white">Calculator</h3>
+                            <p class="text-sm text-white">A simple JavaScript calculator with a modern UI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
+
 </html>
 
 
